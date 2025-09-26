@@ -1,0 +1,31 @@
+WITH purchases AS (
+  SELECT
+    user_pseudo_id,
+    PARSE_DATE('%Y%m%d', event_date) AS purchase_date
+  FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
+  WHERE event_name = 'purchase'
+),
+last_purchase AS (
+  SELECT
+    user_pseudo_id,
+    MIN(purchase_date) AS first_purchase_date,
+    MAX(purchase_date) AS last_purchase_date
+  FROM purchases
+  GROUP BY user_pseudo_id
+),
+segments AS (
+  SELECT
+    user_pseudo_id,
+    first_purchase_date,
+    last_purchase_date,
+    DATE_DIFF(CURRENT_DATE(), last_purchase_date, DAY) AS days_since_last,
+    CASE
+      WHEN first_purchase_date = CURRENT_DATE() THEN 'New'
+      WHEN DATE_DIFF(CURRENT_DATE(), last_purchase_date, DAY) <= 30 THEN 'Active'
+      WHEN DATE_DIFF(CURRENT_DATE(), last_purchase_date, DAY) BETWEEN 31 AND 60 THEN 'Dormant'
+      ELSE 'Lost'
+    END AS segment
+  FROM last_purchase
+)
+SELECT *
+FROM segments;
