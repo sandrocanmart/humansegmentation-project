@@ -1,3 +1,5 @@
+https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3sdfb082d3-a71b-4482-a423-b6b22a7bdd48!2e1
+
 WITH purchases AS (
   SELECT
     user_pseudo_id,

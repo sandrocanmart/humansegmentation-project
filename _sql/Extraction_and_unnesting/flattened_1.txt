@@ -1,3 +1,6 @@
+https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3s33cdf1f9-85d9-4915-8dc0-aff4093ed1fa!2e1
+
+
 WITH flattened AS (
   SELECT
     e.event_date,
