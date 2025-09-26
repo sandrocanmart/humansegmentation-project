@@ -1,6 +1,7 @@
 -Notebook "Analysis and Segmentation"
 https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3s72eb4794-5d65-4e11-af86-2d0cee63113f!2e2
 
+
 In the link above you find GCP notebook, which covers the key 
 analysis (ad campaigns, event volumes, and their 
 trends over time) and concludes with the segmentation. 
