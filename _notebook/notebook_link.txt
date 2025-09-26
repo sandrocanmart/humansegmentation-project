@@ -1,5 +1,9 @@
 -Notebook "Analysis and Segmentation"
-https://console.cloud.google.com/bigquery?hl=it&project=amazing-sunset-472417-a3&authuser=2&ws=!1m65!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3s4d299575-e990-4ad7-8a7b-0bdce9a6f1c1!2e1!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3s46ae7d81-5383-4fbe-aed6-2449ced8757f!2e2!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3sdd51d448-4379-4253-bb2f-2cff57c7a72f!2e1!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3sdfb082d3-a71b-4482-a423-b6b22a7bdd48!2e1!1m3!8m2!1s538376458606!2s9fea5c5e796642118f0ce48644db16e8!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3s3ad24711-dc4c-4bb3-a2eb-5e204d7f22e5!2e2!1m4!16m3!1m1!1samazing-sunset-472417-a3!3e12!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3s33cdf1f9-85d9-4915-8dc0-aff4093ed1fa!2e1!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3s72eb4794-5d65-4e11-af86-2d0cee63113f!2e2!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3sc99e2cde-2545-4b8b-be8b-cf1f30e54779!2e1
+https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1samazing-sunset-472417-a3!2sus-central1!3s72eb4794-5d65-4e11-af86-2d0cee63113f!2e2
 
-
-Data of this notebook comes from output of the query 
+In the link above you find GCP notebook, which covers the key 
+analysis (ad campaigns, event volumes, and their 
+trends over time) and concludes with the segmentation. 
+You can access it via the link in the file header; 
+if for any reason the link doesn’t work, the notebook 
+file is also included in this folder.
