@@ -4,6 +4,7 @@ WITH flattened AS (
     e.event_timestamp,
     e.event_name,
     e.user_pseudo_id,
+
     MAX(IF(ep.key = 'page_location', ep.value.string_value, NULL)) AS page_location,
     MAX(IF(ep.key = 'page_title',    ep.value.string_value, NULL)) AS page_title,
     MAX(IF(ep.key = 'ga_session_id', CAST(ep.value.int_value AS INT64), NULL)) AS ga_session_id,
@@ -11,10 +12,13 @@ WITH flattened AS (
     MAX(IF(ep.key = 'source',        ep.value.string_value, NULL)) AS source,
     MAX(IF(ep.key = 'medium',        ep.value.string_value, NULL)) AS medium,
     MAX(IF(ep.key = 'campaign',      ep.value.string_value, NULL)) AS campaign,
+
     MAX(IF(ep.key = 'value',         ep.value.float_value, NULL)) AS value_param,
     MAX(IF(ep.key = 'currency',      ep.value.string_value, NULL)) AS currency
   FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*` e
   CROSS JOIN UNNEST(e.event_params) AS ep
-  WHERE _TABLE_SUFFIX BETWEEN '20201101' AND '20210131'
   GROUP BY 1,2,3,4
 )
+SELECT * FROM flattened
+WHERE event_name IN ('page_view','purchase')
+ORDER BY event_timestamp
