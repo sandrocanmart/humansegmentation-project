@@ -13,17 +13,30 @@ This repository contains the analysis performed on the
 with the goal of segmenting users into **New, Active, Dormant, and Lost** buckets.
 
 ## Repository Structure
+
 ├─ _documents/                  # Final deliverables
+
 │  ├─ Recommendations.*         # Marketing & sales recommendations
+
 │  └─ Automations.*             # Automation plan (segment computation & activation)
+
 ├─ _sql/                        # SQL (as .txt) used to manipulate data in GCP BigQuery
+
 │  ├─ Extraction_and_unnesting/
+
 │  │  ├─ unflatten_query_v1.txt
-│  │  └─ unflatten_query_v2.txt   # Two alternative unnesting approaches, used at different times
+
+│  │  └─ unflatten_query_v2.txt   # Two alternative 
+unnesting approaches, used at different times
+
 │  └─ Analysis/
+
 │     └─ Segmentation.txt   # First segmentation d
+
 └─ _notebook/
+
    └─ notebook_link.txt         # Link to the GCP notebook used for the core analysis
+   
 
 
 ## Deliverables
